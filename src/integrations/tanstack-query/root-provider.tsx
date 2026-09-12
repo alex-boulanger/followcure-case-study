@@ -1,10 +1,6 @@
 import { QueryClient } from '@tanstack/react-query'
 
+// setupRouterSsrQueryIntegration installs QueryClientProvider in router.tsx.
 export function getContext() {
-  const queryClient = new QueryClient()
-
-  return {
-    queryClient,
-  }
+  return { queryClient: new QueryClient() }
 }
-export default function TanstackQueryProvider() {}
