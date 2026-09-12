@@ -1,7 +1,8 @@
 # Cloudflare Pages project.
 #
 # `name` is the project the deploy uploads to, and
-# `pages_build_output_dir` is what gets uploaded. The workflow runs
+# `pages_build_output_dir` is what gets uploaded: the prerendered SPA shell and
+# its assets. `dist/server` is not deployed, the app needs no server. The workflow runs
 # `wrangler pages deploy` without a directory argument so this file remains the
 # deploy source of truth.
 #
@@ -10,4 +11,4 @@
 
 name = "followcure-case-study"
 compatibility_date = "2026-08-16"
-pages_build_output_dir = "dist"
+pages_build_output_dir = "dist/client"
